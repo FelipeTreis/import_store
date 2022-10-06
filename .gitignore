@@ -113,6 +113,7 @@ gunicorn-error-log
 db.sqlite3
 db copy.sqlite3
 static/
+covers
 
 # Deploy
 deploy
