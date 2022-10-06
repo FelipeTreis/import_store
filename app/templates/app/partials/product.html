@@ -1,0 +1,64 @@
+<div class="recipe recipe-list-item">
+    {% if product.cover.url is not Null %}
+        <div class="recipe-cover">
+            <a href="{% url 'app:item' product.id %}">
+                <img src="{{ product.cover.url }}" alt="" />
+            </a>
+        </div>
+    {% endif %}
+    <div class="recipe-title-container">
+        <h2 class="recipe-title">
+            <a href="{% url 'app:item' product.id %}">
+                {{ product.name}}
+            </a>
+        </h2>
+        <div class="recipe-author-item">
+            {% if product.category is not None %}
+                <span class="recipe-author-item">
+                    <a href="{% url 'app:category' product.category.id %}">
+                        <i class="fas fa-socks"></i>
+                        <span>{{ product.category.name }}</span>
+                    </a>
+                </span>
+            {% endif %}
+            {% if product.brand is not None %}
+                <span class="recipe-author-item">
+                    <a href="{% url 'app:brand' product.brand.id %}">
+                        <i class="fas fa-socks"></i>
+                        <span>{{ product.brand.name }}</span>
+                    </a>
+                </span>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="recipe-value-container">
+        <div class="recipe-servings">
+            <h3 class="recipe-meta-title">
+                <i class="fas fa-money-bill"></i> Values
+            </h3>
+                <div class="recipe-meta-text">In cash: ${{ product.value }} or</div>
+                <div class="recipe-meta-text">Parcel: {{ product.qty_parcel }}X ${{ product.value_parcel }}</div>
+        </div>
+    </div>   
+    {% if is_detail_page is not True %}
+        <footer class="recipe-footer">
+            <a class="recipe-read-more button button-dark button-full-width" href="{% url 'app:item' product.id %}">
+                <i class="fas fa-eye"></i>
+                <span>See more...</span>
+            </a>
+        </footer>
+    {% endif %}
+    {% if is_detail_page is True %}
+        <div class="recipe-content preparation-steps">
+            <p>
+                {{ product.description }}
+            </p><br>
+            <p>
+                Se interessou?! Entre em contato!
+            </p>
+        </div>
+        <a class="back" href="{% url 'app:home' %}"><i class="fas fa-backward"></i> Back</a>
+    {% endif %}
+
+</div>

@@ -4,8 +4,12 @@
 
 {% block content %}
     <div class="main-content main-content-list container">
-        <div class="margin">
-            <h1>Não achamos nada aqui 😭</h1>
-        </div>
+        {% for product in products %}
+            {% include 'app/partials/product.html' %}
+        {% empty %}
+            <div class="margin">
+                <h1>Not found nothing here 😭</h1>
+            </div>
+        {% endfor %}
     </div>
 {% endblock content %}
