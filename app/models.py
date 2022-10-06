@@ -8,7 +8,7 @@ class Category(models.Model):
         verbose_name = 'Category'
         verbose_name_plural = 'Categories'
 
-    name = models.CharField(max_length=100, null=False, blank=False)
+    name = models.CharField(max_length=100, unique=True, null=False, blank=False)
     is_actived = models.BooleanField(default=False)
 
     def __str__(self):
@@ -16,7 +16,7 @@ class Category(models.Model):
 
 
 class Brand(models.Model):
-    name = models.CharField(max_length=100, null=False, blank=False)
+    name = models.CharField(max_length=100, unique=True, null=False, blank=False)
     is_actived = models.BooleanField(default=False)
 
     def __str__(self):
