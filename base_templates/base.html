@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <title>Import Store</title>
 </head>
 <body>
+    {% include 'app/partials/menu.html' %}
     {% include 'app/partials/header.html' %}
     {% include 'app/partials/search.html' %}
 
@@ -15,5 +17,6 @@
     </main>
     
     {% include 'app/partials/footer.html' %}
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
