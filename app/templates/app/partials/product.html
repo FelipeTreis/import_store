@@ -16,7 +16,7 @@
             {% if product.category is not None %}
                 <span class="recipe-author-item">
                     <a href="{% url 'app:category' product.category.id %}">
-                        <i class="fas fa-socks"></i>
+                        <i class="fas fa-list"></i>
                         <span>{{ product.category.name }}</span>
                     </a>
                 </span>
@@ -24,7 +24,7 @@
             {% if product.brand is not None %}
                 <span class="recipe-author-item">
                     <a href="{% url 'app:brand' product.brand.id %}">
-                        <i class="fas fa-socks"></i>
+                        <i class="fas fa-user"></i>
                         <span>{{ product.brand.name }}</span>
                     </a>
                 </span>
