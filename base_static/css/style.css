@@ -1,7 +1,7 @@
 :root {
-    --color-primary: #269fe6;
-    --color-primary-hover: #2086c2;
-    --color-primary-dark: #13141f;
+    --color-primary: #0b4b70;
+    --color-primary-hover: #1a5679;
+    --color-primary-dark: #0e131d;
     --color-primary-dark-hover: #212336;
     --color-primary-light: #d4ecfa;
     --color-primary-light-hover: #bdd8e7;
@@ -372,10 +372,19 @@
     background: var(--color-gray-3);
     z-index: 2;
     transition: all 300ms ease-in-out;
+    border-right: 2px solid var(--color-primary-dark);
+    box-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.5);
   }
 
   .menu-container a {
     color: var(--color-white);
+    transform: scale(1);
+  }
+
+  .menu-container a:hover {
+    color: var(--color-primary-dark-hover);
+    transition: all 300ms ease-in-out;
+    transform: scale(1.005);
   }
 
   .menu-hidden {
@@ -395,8 +404,9 @@
     visibility: visible;
     opacity: 1;
     transition: all 300ms ease-in-out;
-    border-radius: 1px 1px 1px 1px;
+    border-radius: 0 2px 2px 0;
     cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
   }
 
   .button-show-menu-visible {
