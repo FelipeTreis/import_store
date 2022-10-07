@@ -55,3 +55,9 @@ def search(request):
         'products': products,
         'additional_url_query': f'&q={search_term}',
     })
+
+
+def about(request):
+    return render(request, 'app/pages/about.html', context={
+        'title': 'About Us',
+    })

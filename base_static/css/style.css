@@ -348,6 +348,14 @@
     background: rgb(238, 238, 238);
   }
 
+  .about-text {
+    font-size: 20px;
+    padding-top: 10rem;
+    padding-bottom: 50rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   /* Menu */
   .hidden-text {
     display: none;

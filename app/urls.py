@@ -10,4 +10,5 @@ urlpatterns = [
     path('store/category/<int:category_id>/', views.category, name='category'),
     path('store/brand/<int:brand_id>/', views.brand, name='brand'),
     path('store/<int:id>/', views.item, name='item'),
+    path('store/about-us/', views.about, name='about'),
 ]
